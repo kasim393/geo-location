@@ -17,7 +17,7 @@ function successCallback(pos) {
   lat.innerHTML = crd.latitude;
   long.innerHTML = crd.longitude;
   accuracy.innerHTML = crd.accuracy.toFixed(2);
-  speed.innerHTML = crd.speed;
+  speed.innerHTML = crd.speed.toFixed(3);
   date.innerHTML =
     new Date(pos.timestamp).toLocaleTimeString() +
     " " +
@@ -28,7 +28,7 @@ function successCallback(pos) {
   localStorage.setItem("lat", crd.latitude);
   localStorage.setItem("long", crd.longitude);
   localStorage.setItem("acc", crd.accuracy.toFixed(2));
-  localStorage.setItem("speed", crd.speed);
+  localStorage.setItem("speed", crd.speed).toFixed(3);
   localStorage.setItem(
     "date",
     new Date(pos.timestamp).toLocaleTimeString() +
